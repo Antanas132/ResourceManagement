@@ -79,7 +79,7 @@ namespace ResourceManagement.Data
         {
             return user.IsAdmin ? _shortages : _shortages.Where(s => s.CreatedBy == user.Name).ToList();
         }
-        public List<Shortage> GetAllShortages(User user, string titleFilter = null, DateTime? startDate = null, DateTime? endDate = null, RoomType? roomFilter = null, CategoryType? categoryFilter = null)
+        public List<Shortage> GetAllShortages(User user, string? titleFilter = null, DateTime? startDate = null, DateTime? endDate = null, RoomType? roomFilter = null, CategoryType? categoryFilter = null)
 
         {
             var shortages = user.IsAdmin ? _shortages : _shortages.Where(s => s.CreatedBy == user.Name).ToList();

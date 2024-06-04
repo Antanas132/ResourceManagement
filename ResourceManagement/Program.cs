@@ -100,7 +100,7 @@ class Program
             {
                 Console.WriteLine("Enter filter type (title, date, room, category):");
                 var filterType = Console.ReadLine();
-                List<Shortage> filteredShortages = null;
+                List<Shortage>? filteredShortages = null;
 
                 if (filterType == "title")
                 {
